@@ -25,14 +25,20 @@ The Raspberry Pi will also be able to use data collected from an accelerometer t
 
 ## Timeline
 
+<p align="center">
+  <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/Slide.png" width="600" title="IDD Slide">
+</p>
+
 1. 17 November - Order parts
 2. 25 November - Receive parts
 3. 25 November - Start building prototype
 4. 29 November - Finish first draft of prototype for testing, validation and for functional check off
 5. 30 November - Take feedback from course instructors and make changes to prototype
 6. 3 December - Finish final working prototype ready for submission
-7. 4 December - Build dashboard and website for runners to view their workouts. 
+7. 4 December - Build dashboard and website for runners to view their workouts
 8. 5 December - Complete documentation and submit project
+
+
 
 ## Parts Needed
 
