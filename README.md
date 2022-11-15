@@ -44,10 +44,10 @@ The Raspberry Pi will also be able to use data collected from an accelerometer t
 
 The parts needed would be:
 
-1. Raspberry Pi
-2. GPS Module
-3. Accelerometer
-4. Phone only for cellular connectivity
+1. 1 x Raspberry Pi
+2. 1 x GPS Module
+3. 1 x Accelerometer
+4. 1 x Phone only for cellular connectivity
 
 ## Risks/Contingencies
 
