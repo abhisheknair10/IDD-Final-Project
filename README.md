@@ -26,7 +26,7 @@ The Raspberry Pi will also be able to use data collected from an accelerometer t
 ## Timeline
 
 <p align="center">
-  <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/Project%20Timeline.png" width="600" title="IDD Slide">
+  <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/Project%20Timeline.png" width="800" title="IDD Slide">
 </p>
 
 1. 17 November - Order parts
