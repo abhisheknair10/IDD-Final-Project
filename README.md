@@ -12,7 +12,7 @@ The plan for this project is to build an intuitive system to help runners track 
 We wish to source our parts as soon as possible and start building the prototype as soon as we have all the parts. We hope to order parts by 17 November and receive them by 25th November. We wish to complete the full project including the documentation by the final project presentation date. This will enable us to provide an impactful and complete project to the course instructors.
 
 <p align="center">
-  <img src="your_relative_path_here" width="600" title="IDD Slide">
+  <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/Slide.png" width="600" title="IDD Slide">
 </p>
 
 ## Big Idea
