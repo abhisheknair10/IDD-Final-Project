@@ -5,7 +5,9 @@ Collaborators:
 1. Abhishek Nair - an464@cornell.edu
 2. Vikram Pandian - vip6@cornell.edu
 
-Introduction
+This is the [Developing and Designing Interactive Devices](https://www.tech.cornell.edu/news/courses/developing-and-designing-interactive-devices-2/) Final Project as part of the Cornell Tech Master of Engineering Program.
+
+# Introduction
 
 Internet of Things and Interactive Devices is the field of technology that deals with physical objects with computational capabilties, sensors and actuators that can connect to any form of network, including the internet, to exchange data with other devices, servers or the cloud.
 
