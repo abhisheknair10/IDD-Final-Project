@@ -20,7 +20,8 @@ The aim of this assignment is to:
 
 Table of Contents
 
-<<<<<<< HEAD
+<center>
+
 | No      |  Title 
 | :---:   | :---: 
 | 1.      | [INSERT TITLE HERE]()
@@ -28,3 +29,4 @@ Table of Contents
 | 3.      | [INSERT TITLE HERE]()
 | 4.      | [INSERT TITLE HERE]()
 
+</center>
