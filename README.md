@@ -20,7 +20,7 @@ The aim of this assignment is to:
 
 Table of Contents
 
-<center>
+<div align="center">
 
 | No      |  Title 
 | :---:   | :---: 
@@ -29,6 +29,6 @@ Table of Contents
 | 3.      | [INSERT TITLE HERE]()
 | 4.      | [INSERT TITLE HERE]()
 
-</center>
+</div>
 
 [INSERT HERE]
