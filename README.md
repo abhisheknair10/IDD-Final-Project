@@ -33,13 +33,19 @@ The aim of this assignment is to:
 
 </div>
 
+To understand how the different parts of this project and different services communicate with each other to create a valuable application, below is a diagram of the app architecture.
+
+<p align="center">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/Project%20Timeline.png" width="800" title="IDD Slide">
+</p>
+
 # 1. About the Hardware
 
 # 2. The Run Tracking Software on the Raspberry Pi
 
 # 3. Cloud Server Development
 
-The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more. 
+The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more.
 
 To complete this task, a server was rented from [Linode](https://www.linode.com), a platform providing cloud based services. Linux based servers running other Linux distros can also be rented from other providers such as [DigitlOcean](https://www.digitalocean.com/products/droplets), [Amazon Web Services](https://aws.amazon.com/ec2/?nc2=h_ql_prod_cp_ec2), [Microsoft Azure](https://azure.microsoft.com/en-gb/services/virtual-machines/), [Google Cloud](https://cloud.google.com/compute), etc. Most providers offer free credits for the first few months.
 
