@@ -26,10 +26,10 @@ The aim of this assignment is to:
 
 | No      |  Title 
 | :---:   | :---: 
-| 1.      | [About the Hardware]()
-| 2.      | [The Run Tracking Software on the Raspberry Pi]()
-| 3.      | [Cloud Server Development]()
-| 4.      | [Client Side Development]()
+| 1.      | [About the Hardware](https://github.com/abhisheknair10/IDD-Final-Project#1-about-the-hardware)
+| 2.      | [The Run Tracking Software on the Raspberry Pi](https://github.com/abhisheknair10/IDD-Final-Project#2-the-run-tracking-software-on-the-raspberry-pi)
+| 3.      | [Cloud Server Development](https://github.com/abhisheknair10/IDD-Final-Project#3-cloud-server-development)
+| 4.      | [Client Side Development](https://github.com/abhisheknair10/IDD-Final-Project#4-client-side-development)
 
 </div>
 
