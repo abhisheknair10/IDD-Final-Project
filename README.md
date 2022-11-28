@@ -38,11 +38,53 @@ The aim of this assignment is to:
 # 2. The Run Tracking Software on the Raspberry Pi
 
 # 3. Cloud Server Development
+
 The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more. 
 
 To complete this task, a server was rented from [Linode](https://www.linode.com), a platform providing cloud based services. Linux based servers running other Linux distros can also be rented from other providers such as [DigitlOcean](https://www.digitalocean.com/products/droplets), [Amazon Web Services](https://aws.amazon.com/ec2/?nc2=h_ql_prod_cp_ec2), [Microsoft Azure](https://azure.microsoft.com/en-gb/services/virtual-machines/), [Google Cloud](https://cloud.google.com/compute), etc. Most providers offer free credits for the first few months.
 
-## 3.1. Server Setup
+## 3.1 Server Setup
+
+The server in question is a Linux based Ubuntu server running a Node.js application to accept RESTful API requests.
+
+The following steps will guide you through the process of setting up a Node.js server on a Linux server.
+
+1. SSH(Secure Shell) into the server using the [command](https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows):
+    ```bash
+    ssh root@[IPv4 address]
+    ```
+
+2. Install NVM which is the [Node Version Manager](https://github.com/nvm-sh/nvm) using the command:
+    ```bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    ```
+
+3. Reload the bash preferences with the command:
+    ```bash
+    source ~/.bashrc
+    ```
+
+4. Install the correct Node.js version:
+    - Get the latest available version:
+        ```bash
+        nvm ls-remote
+        ```
+    
+    - Install the specified Node.js version:
+        ```bash
+        nvm install 18.0.0
+        ```
+
+5. Install [PM2](https://pm2.keymetrics.io) which is a Node.js application Process Manager using the command:
+    ```bash
+    npm i -g pm2
+    ```
+
+After completing the above steps, the server is ready to host a Node.js application.
+
+The above steps were sourced from the following [YouTube Video](https://www.youtube.com/watch?v=fJ4x00SR7vo).
+
+## 3.2. Backend Node.js Application Setup
 ___
 
 For this project, we will be using a Node.js server to collect, format and store the GPS data that is streamed from the Raspberry Pi to a JSON file. The data for each run is stored in an array where each index, representing a run, contains an object with the following properties:
@@ -178,44 +220,7 @@ app.get('/analyze-run/:runNum', (req, res) => {
 });
 ```
 
-All of this code is stored in [app.js]() in this GitHub repository.
-
-However, to run Node.js on a Linux server requires installing certain tools and libraries.The following steps will guide you through the process of setting up a Node.js server on a Linux server.
-
-1. SSH(Secure Shell) into the server using the [command](https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows):
-    ```bash
-    ssh root@[IPv4 address]
-    ```
-
-2. Install NVM which is the [Node Version Manager](https://github.com/nvm-sh/nvm) using the command:
-    ```bash
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    ```
-
-3. Reload the bash preferences with the command:
-    ```bash
-    source ~/.bashrc
-    ```
-
-4. Install the correct Node.js version:
-    - Get the latest available version:
-        ```bash
-        nvm ls-remote
-        ```
-    
-    - Install the specified Node.js version:
-        ```bash
-        nvm install 18.0.0
-        ```
-
-5. Install [PM2](https://pm2.keymetrics.io) which is a Node.js application Process Manager using the command:
-    ```bash
-    npm i -g pm2
-    ```
-
-After completing the above steps, the server is ready to host a Node.js application.
-
-The above steps were sourced from the following [YouTube Video](https://www.youtube.com/watch?v=fJ4x00SR7vo).
+All of this code is stored in [app.js](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/server/app.js) in this GitHub repository.
 
 Since we are using the Express framework, we need to install it using the command:
 
