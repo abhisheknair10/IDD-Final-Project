@@ -45,7 +45,7 @@ To complete this task, a server was rented from [Linode](https://www.linode.com)
 ## 3.1. Server Setup
 ___
 
-For this project, we will be using a Node.js server to collect, format and store the GPS data that is streamed from the Raspberry Pi to a JSON file. The data is stored in the following format:
+For this project, we will be using a Node.js server to collect, format and store the GPS data that is streamed from the Raspberry Pi to a JSON file. The data for each run is stored in an array where each index, representing a run, contains an object with the following properties:
 
 ```json
 {
