@@ -50,8 +50,8 @@ For this project, we will be using a Node.js server to collect, format and store
 ```json
 {
     "runid": 1,
-    "lat": ["lat1", "lat2", "lat3", ...],
-    "lon": ["lon1", "lon2", "lon3", ...]
+    "lat": ["lat1", "lat2", "lat3", ->],
+    "lon": ["lon1", "lon2", "lon3", ->]
 }
 ```
 
