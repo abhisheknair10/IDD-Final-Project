@@ -37,7 +37,7 @@ The aim of this assignment is to:
 
 # 2. The Run Tracking Software on the Raspberry Pi
 
-# 3. Cloud Server
+# 3. Cloud Server Development
 The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more. 
 
 To complete this task, a server was rented from [Linode](https://www.linode.com), a platform providing cloud based services. Linux based servers running other Linux distros can also be rented from other providers such as [DigitlOcean](https://www.digitalocean.com/products/droplets), [Amazon Web Services](https://aws.amazon.com/ec2/?nc2=h_ql_prod_cp_ec2), [Microsoft Azure](https://azure.microsoft.com/en-gb/services/virtual-machines/), [Google Cloud](https://cloud.google.com/compute), etc. Most providers offer free credits for the first few months.
@@ -216,3 +216,5 @@ However, to run Node.js on a Linux server requires installing certain tools and 
 After completing the above steps, the server is ready to host a Node.js application.
 
 The above steps were sourced from the following [YouTube Video](https://www.youtube.com/watch?v=fJ4x00SR7vo).
+
+# 4. Client Side Development
