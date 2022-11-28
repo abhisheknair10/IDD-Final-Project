@@ -37,12 +37,12 @@ The aim of this assignment is to:
 
 # 2. The Run Tracking Software on the Raspberry Pi
 
-# 2. Cloud based Server
+# 3. Cloud based Server
 The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more. 
 
 To complete this task, a server was rented from [Linode](https://www.linode.com), a platform providing cloud based services. Linux based servers running other Linux distros can also be rented from other providers such as [DigitlOcean](https://www.digitalocean.com/products/droplets), [Amazon Web Services](https://aws.amazon.com/ec2/?nc2=h_ql_prod_cp_ec2), [Microsoft Azure](https://azure.microsoft.com/en-gb/services/virtual-machines/), [Google Cloud](https://cloud.google.com/compute), etc. Most providers offer free credits for the first few months.
 
-## 2.1. Server Setup
+## 3.1. Server Setup
 ___
 
 For this project, we will be using a Node.js server to collect, format and store the GPS data that is streamed from the Raspberry Pi to a JSON file. The data is stored in the following format:
