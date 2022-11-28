@@ -36,7 +36,7 @@ The aim of this assignment is to:
 To understand how the different parts of this project and different services communicate with each other to create a valuable application, below is a diagram of the app architecture.
 
 <p align="center">
-    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/App%20Architecture.png" width="800" title="IDD Slide">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/App%20Architecture.png" width="600" title="IDD Slide">
 </p>
 
 # 1. About the Hardware
