@@ -217,4 +217,21 @@ After completing the above steps, the server is ready to host a Node.js applicat
 
 The above steps were sourced from the following [YouTube Video](https://www.youtube.com/watch?v=fJ4x00SR7vo).
 
+Since we are using the Express framework, we need to install it using the command:
+
+```bash
+npm install express
+```
+
+Now the application is ready to run with the following commands:
+
+1. To run the application using node:
+    ```bash
+    node app.js
+    ```
+2. To run the application using PM2:
+    ```bash
+    pm2 start app.js
+    ```
+
 # 4. Client Side Development
