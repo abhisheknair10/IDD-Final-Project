@@ -44,7 +44,6 @@ To understand how the different parts of this project and different services com
 The hardware we are using for this project is a Raspberry Pi 3 B+ and a Neo 6M GPS module.
 
 ## 1.1. Raspberry Pi 3 B+
-___
 
 The Raspberry Pi 3 B+ is a ARMv8 64bit based processor that can run a Linux based operating system. It has 1GB of RAM and 4 USB ports. It also has a 40 pin GPIO header that can be used to connect external hardware to the Raspberry Pi. The Raspberry Pi 3 B+ is a very popular single board computer that is used in many projects due to its low cost and high performance.
 
@@ -55,7 +54,6 @@ For this application, the Debian based Raspbian OS is used which is Linux based 
 </p>
 
 ## 1.2. Neo 6M GPS Module
-___
 
 The Neo 6M GPS module is a GPS module that can be connected to the Raspberry Pi via the USB port for newer versions. It has a connected antenna that can be used to receive GPS signals from up to 22 satellites across 50 channels. 
 
