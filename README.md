@@ -56,7 +56,7 @@ ___
 The Neo 6M GPS module is a GPS module that can be connected to the Raspberry Pi via the USB port for newer versions. It has a connected antenna that can be used to receive GPS signals from up to 22 satellites across 50 channels. 
 
 <p align="center">
-    <img src="" width="600" title="Neo 6M">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/neo6m.png" width="600" title="Neo 6M">
 </p>
 
 # 2. The Run Tracking Software on the Raspberry Pi
