@@ -346,4 +346,8 @@ Access the dashboard by simply downloading the HTML file and opening it in your 
 
 # 5. Testing, Results and Conclusions
 
-## 5.1. Testing
+## 5.1. Testing and Results
+
+## 5.2. Pitfalls and Issues
+
+## 5.3. Conclusions
