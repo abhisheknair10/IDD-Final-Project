@@ -283,3 +283,39 @@ Now the application is ready to run with the following commands:
     ```
 
 # 4. Client Side Development
+
+## 4.1. Frontend Web Dashboard Setup
+
+The frontend of this application for viewing the runs on a dashboard is hosted on GitHub Pages which is a service provided by GitHub that allows users to host static websites for free. The frontend is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in the [index.html](https://github.com/trakdruns/trakdruns.github.io/blob/main/index.html) in the [tradruns](https://github.com/trakdruns/trakdruns.github.io) repo which is owned by the collaborators of this project.
+
+## 4.2. Google Maps JavaScript API
+Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/JavaScript/overview).
+
+With a [Google Cloud Account](https://cloud.google.com) created, navigate to 'Credentials' and create a new API key. The next step is to enable the Maps JavaScript API under 'Enabled APIs & Services'. Navigate back to 'Credentials' and save the LocalHost IPv4 Address as a verified HTTP Referrer.
+
+The API is now initialized and accessible.
+
+The map is initialized using the following code:
+
+```js
+var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 17,
+    center: new google.maps.LatLng(latitude, longitude),
+    mapTypeId: "terrain",
+});
+```
+
+The coordinates are marked on the map using the following code:
+```js
+const runPath = new google.maps.Polyline({
+    path: runCoords,
+    geodesic: true,
+    strokeColor: "#e34444",
+    strokeOpacity: 1.0,
+    strokeWeight: 4,
+});
+
+runPath.setMap(map);
+```
+
+Marking and plotting lines on the map in detail can be found in the [source code](https://github.com/trakdruns/trakdruns.github.io/blob/main/index.html).
