@@ -212,7 +212,7 @@ app.get('/append/:runid/:lat/:lon', (req, res) => {
 3. When the user wishes to access the web dashboard via GitHub Pages, the website accesses the '/getnumruns' endpoint to get the number of runs that have been stored in the run.json file. This is used to display the number of runs in the dropdown menu for a selection of runs.
 
 ```javascript
-app.get('/getNumRuns', (req, res) => {
+app.get('/getnumruns', (req, res) => {
     const main = async () => {
 
         var runData = await fs.readFile('/root/src/run.json', 'utf8');
