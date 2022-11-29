@@ -289,7 +289,7 @@ Now the application is ready to run with the following commands:
 The frontend of this application for viewing the runs on a dashboard is hosted on GitHub Pages which is a service provided by GitHub that allows users to host static websites for free. The frontend is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in the [index.html](https://github.com/trakdruns/trakdruns.github.io/blob/main/index.html) in the [trakdruns](https://github.com/trakdruns/trakdruns.github.io) repo which is owned by the collaborators of this project.
 
 ## 4.2. Google Maps JavaScript API
-Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/JavaScript/overview).
+Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
 With a [Google Cloud Account](https://cloud.google.com) created, navigate to 'Credentials' and create a new API key. The next step is to enable the Maps JavaScript API under 'Enabled APIs & Services'. Navigate back to 'Credentials' and save the LocalHost IPv4 Address as a verified HTTP Referrer.
 
