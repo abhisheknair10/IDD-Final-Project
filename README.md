@@ -286,7 +286,7 @@ Now the application is ready to run with the following commands:
 
 ## 4.1. Frontend Web Dashboard Setup
 
-The frontend of this application for viewing the runs on a dashboard is hosted on GitHub Pages which is a service provided by GitHub that allows users to host static websites for free. The frontend is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in the [index.html](https://github.com/trakdruns/trakdruns.github.io/blob/main/index.html) in the [trakdruns](https://github.com/trakdruns/trakdruns.github.io) repo which is owned by the collaborators of this project.
+The frontend of this application for viewing the runs on a dashboard is hosted on GitHub Pages which is a service provided by GitHub that allows users to host static websites for free. The frontend is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in [index.html](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/frontend/index.html)
 
 ## 4.2. Google Maps JavaScript API
 Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
@@ -318,4 +318,4 @@ const runPath = new google.maps.Polyline({
 runPath.setMap(map);
 ```
 
-Marking and plotting lines on the map in detail can be found in the [source code](https://github.com/trakdruns/trakdruns.github.io/blob/main/index.html).
+Marking and plotting lines on the map in detail can be found in the [source code](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/frontend/index.html).
