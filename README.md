@@ -61,7 +61,26 @@ The Neo 6M GPS module is a GPS module that can be connected to the Raspberry Pi 
     <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/neo6m.png" width="300" title="Neo 6M">
 </p>
 
+Interfacing the Neo 6M with the Raspberry Pi requires running some UNIX commands in the command line. The commands are as follows:
+
+1. Install gpsd:
+    ```bash
+    sudo apt-get install gpsd gpsd-clients python-gps
+    ```
+
+2. Identify all the ports on the Raspberry Pi and find the one that is associated with the GPS module:
+    ```bash
+    ```bash
+    ls -l /dev/tty*
+    ```
+For our specific device, the port was /dev/ttyAMA0.
+
+This port needs to be noted down when running the python file to read the GPS data from the correct port at a baud rate of 9600.
+
+
 # 2. The Run Tracking Software on the Raspberry Pi
+
+To be added...
 
 # 3. Cloud Server Development
 
