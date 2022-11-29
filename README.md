@@ -291,7 +291,7 @@ The frontend of this application for viewing the runs on a dashboard is hosted o
 ## 4.2. Google Maps JavaScript API
 Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
-With a [Google Cloud Account](https://cloud.google.com) created, navigate to 'Credentials' and create a new API key. The next step is to enable the Maps JavaScript API under 'Enabled APIs & Services'. Navigate back to 'Credentials' and save the LocalHost IPv4 Address as a verified HTTP Referrer.
+With a [Google Cloud Account](https://cloud.google.com) created, navigate to 'Credentials' and create a new API key. The next step is to enable the Maps JavaScript API under 'Enabled APIs & Services'.
 
 The API is now initialized and accessible.
 
