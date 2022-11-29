@@ -65,7 +65,7 @@ Interfacing the Neo 6M with the Raspberry Pi requires running some UNIX commands
 
 1. Install gpsd:
     ```bash
-    sudo apt-get install gpsd gpsd-clients python-gps
+    sudo apt-get install gpsd gpsd-clients
     ```
 
 2. Identify all the ports on the Raspberry Pi and find the one that is associated with the GPS module:
