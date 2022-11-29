@@ -109,7 +109,7 @@ app.get('/resetfile', (req, res) => {
     main()
 });
 
-app.get('/getNumRuns', (req, res) => {
+app.get('/getnumruns', (req, res) => {
     const main = async () => {
 
         var runData = await fs.readFile('/root/src/run.json', 'utf8');
