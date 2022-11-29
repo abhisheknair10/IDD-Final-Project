@@ -36,7 +36,7 @@ The aim of this assignment is to:
 To understand how the different parts of this project and different services communicate with each other to create a valuable application, below is a diagram of the app architecture.
 
 <p align="center">
-    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/App%20Architecture.png" width="600" title="IDD Slide">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/architecture.png" width="600" title="IDD Slide">
 </p>
 
 # 1. About the Hardware
@@ -209,7 +209,7 @@ app.get('/append/:runid/:lat/:lon', (req, res) => {
 });
 ```
 
-3. When the user wishes to access the web dashboard via GitHub Pages, the website accesses the '/getnumruns' endpoint to get the number of runs that have been stored in the run.json file. This is used to display the number of runs in the dropdown menu for a selection of runs.
+3. When the user wishes to access the web dashboard via the index.html page, the website accesses the '/getnumruns' endpoint to get the number of runs that have been stored in the run.json file. This is used to display the number of runs in the dropdown menu for a selection of runs.
 
 ```javascript
 app.get('/getnumruns', (req, res) => {
@@ -286,7 +286,7 @@ Now the application is ready to run with the following commands:
 
 ## 4.1. Frontend Web Dashboard Setup
 
-The frontend of this application for viewing the runs on a dashboard is hosted on GitHub Pages which is a service provided by GitHub that allows users to host static websites for free. The frontend is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in [index.html](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/frontend/index.html)
+The frontend of this application for viewing the runs on a dashboard is hosted on Linode and is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in [index.html](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/frontend/index.html)
 
 ## 4.2. Google Maps JavaScript API
 Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
