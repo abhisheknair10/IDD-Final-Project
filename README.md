@@ -51,7 +51,7 @@ The Raspberry Pi 3 B+ is a ARMv8 64bit based processor that can run a Linux base
 For this application, the Debian based Raspbian OS is used which is Linux based OS that is specifically designed for the Raspberry Pi.
 
 <p align="center">
-    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/neo6m.png" width="300" title="Neo 6M">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/raspberrypi.png" width="300" title="Neo 6M">
 </p>
 
 ## 1.2. Neo 6M GPS Module
