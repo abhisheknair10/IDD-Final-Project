@@ -125,7 +125,7 @@ The following steps will guide you through the process of setting up a Node.js s
 
 After completing the above steps, the server is ready to host a Node.js application.
 
-The above steps were sourced from the following [YouTube Video](https://www.youtube.com/watch?v=fJ4x00SR7vo).
+The above steps were sourced from the following [YouTube Video by CodeBubb](https://www.youtube.com/watch?v=fJ4x00SR7vo).
 
 ## 3.2. Backend Node.js Application Setup
 ___
