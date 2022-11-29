@@ -92,7 +92,7 @@ The server in question is a Linux based Ubuntu server running a Node.js applicat
 
 The following steps will guide you through the process of setting up a Node.js server on a Linux server.
 
-1. SSH(Secure Shell) into the server using the [command](https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows):
+1. [SSH(Secure Shell)](https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows) into the server using the command:
     ```bash
     ssh root@[IPv4 address]
     ```
