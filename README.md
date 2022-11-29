@@ -20,6 +20,8 @@ The aim of this assignment is to:
 3. Send GPS data to a remote server
 4. Serve the data on a web dashboard
 
+[Here](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/ProjectPlan.md) is the preliminary project plan
+
 # Table of Contents
 
 <div align="center">
