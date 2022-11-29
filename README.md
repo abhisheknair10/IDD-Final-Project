@@ -292,7 +292,7 @@ The frontend of this application for viewing the runs on a dashboard is hosted o
 Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
 <p align="center">
-    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/dashboard.png" width="600" title="gmapi">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/dashboard.png" width="800" title="gmapi">
 </p>
 
 With a [Google Cloud Account](https://cloud.google.com) created, navigate to 'Credentials' and create a new API key. The next step is to enable the Maps JavaScript API under 'Enabled APIs & Services'.
