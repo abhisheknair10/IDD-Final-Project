@@ -2,16 +2,15 @@ import serial
 import time
 import string
 import pynmea2
-
 import digitalio
 import board
-
 from adafruit_rgb_display.rgb import color565
 import adafruit_rgb_display.st7789 as st7789
 import webcolors
 from PIL import Image, ImageDraw, ImageFont
 from time import strftime, sleep
 import geopy.distance
+import requests
 
 # The display uses a communication protocol called SPI.
 # SPI will not be covered in depth in this course. 
@@ -104,6 +103,10 @@ while True:
             startLon = lng
             totDist = 0.0
             totTime = 0.0
+
+            # create get request
+            response = requests.get("http://97.107.140.230:3000/newrun")
+            runnum = int(response.text)
         
         if buttonA.value and not buttonB.value:
             
@@ -131,6 +134,9 @@ while True:
             totTime = 0.0
 
         if startRun:
+
+            # create get request
+            response = requests.get(f"http://97.107.140.230:3000/append/{runnum}/{lat}/{lng}")
             
             # Draw a black filled box to clear the image.
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
