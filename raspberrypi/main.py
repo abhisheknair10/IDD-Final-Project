@@ -56,7 +56,8 @@ top = padding
 bottom = height - padding
 # Move left to right keeping track of the current x position for drawing shapes.
 x = 0
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font18 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font20 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 
 # these setup the code for our buttons and the backlight and tell the pi to treat the GPIO pins as digitalIO vs analogIO
@@ -69,7 +70,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 draw.rectangle((0, 0, width, height), outline=0, fill=0)
-draw.text((x, 0),"Press Button to Start Run" , font=font, fill="#FFFFFF")
+draw.text((x, 0),"<--- Start Run" , font=font20, fill="#4DFF19")
 disp.image(image, rotation)
 startRun = False
 startLat = 0.0
@@ -79,74 +80,86 @@ totTime = 0.0
 
 
 while True:
-        port="/dev/ttyACM0"
-        ser=serial.Serial(port, baudrate=9600, timeout=0.5)
-        dataout = pynmea2.NMEAStreamReader()
-        newdata=ser.readline()
-        #print(newdata)
 
-        if newdata[0:6] == b'$GPRMC':
-                #print("inside")
-                newmsg=pynmea2.parse(newdata.decode())
-                lat=newmsg.latitude
-                lng=newmsg.longitude
-                gps = "Latitude=" + str(lat) + "and Longitude=" + str(lng)
+    port = "/dev/ttyACM0"
+    ser = serial.Serial(port, baudrate=9600, timeout=0.5)
+    dataout = pynmea2.NMEAStreamReader()
+    newdata=ser.readline()
 
-                strLat = "Latitude=" + str(lat)
-                strLong = "Longitude=" + str(lng)
+    if newdata[0:6] == b'$GPRMC':
+        
+        newmsg=pynmea2.parse(newdata.decode())
+        lat=newmsg.latitude
+        lng=newmsg.longitude
+        gps = "Latitude=" + str(lat) + "and Longitude=" + str(lng)
+
+        strLat = "Latitude=" + str(lat)
+        strLong = "Longitude=" + str(lng)
 
 
-                if buttonB.value and not buttonA.value:  # just button A pressed
-                        startRun = True
-                        startLat = lat
-                        startLon = lng
-                        totDist = 0.0
-                        totTime = 0.0
-                        print("Entered Start Run")
-                
-                if buttonA.value and not buttonB.value:
-                    startRun=False
-                    print("Run Ended")
-                    draw.rectangle((0, 0, width, height), outline=0, fill=0)
-                    y = top
-                    draw.text((x, top),"Run Ended" , font=font, fill="#FFFFFF")
-                    y+=font.getsize("Run Ended")[1]
-                    draw.text((x, y), "Final Distance="+str(totDist), font=font, fill="#FFFFFF")
-                    y+=font.getsize("Final Distance="+str(totDist))[1]
-                    draw.text((x, y), "Total Time="+str(totTime), font=font, fill="#FFFFFF")
-                    y+=font.getsize("Total Time="+str(totTime))[1]
-                    draw.text((x, y),"Press Top Button to Start Run" , font=font, fill="#FFFFFF")
-                    disp.image(image, rotation)
+        if buttonB.value and not buttonA.value:  # just button A pressed
+            
+            startRun = True
+            startLat = lat
+            startLon = lng
+            totDist = 0.0
+            totTime = 0.0
+        
+        if buttonA.value and not buttonB.value:
+            
+            startRun=False
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
+            y = top
+            draw.text((x, top),"Run Ended" , font=font20, fill="#4DFF19")
+            y+=font18.getsize("Run Ended")[1]
+            draw.text((x, y), "Final Distance: "+str(totDist), font=font18, fill="#FFFFFF")
+            y+=font18.getsize("Final Distance: "+str(totDist))[1]
+            draw.text((x, y), "Total Time: "+str(totTime), font=font18, fill="#FFFFFF")
+            disp.image(image, rotation)
 
-                if startRun:
-                    print("Running")
-                    # Draw a black filled box to clear the image.
-                    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+            time.sleep(5)
 
-                    #Print Latitude and Longtitude Values
-                    y = top
-                    draw.text((x, y),strLat , font=font, fill="#FFFFFF")
-                    y += font.getsize(strLat)[1]
-                    draw.text((x, y), strLong, font=font, fill="#FFFFFF")
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
+            draw.text((x, 0),"<--- Start Run" , font=font20, fill="#4DFF19")
+            disp.image(image, rotation)
+            startRun = False
+            startLat = 0.0
+            startLon = 0.0
+            totDist = 0.0
+            totTime = 0.0
 
-                    # Display Distance.
-                    coords_1 = (startLat, startLon)
-                    coords_2 = (lat, lng)
+        if startRun:
+            
+            # Draw a black filled box to clear the image.
+            draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-                    distance = geopy.distance.distance(coords_1, coords_2).miles
-                    totDist+=distance
+            y = top
+            endrunmsg = "<--- End Run"
+            draw.text((x, y), "<--- End Run", font=font20, fill="#FF4119")
 
-                    y+= font.getsize(strLong)[1]
-                    draw.text((x, y), "Distance="+str(totDist), font=font, fill="#FFFFFF")
-                    print("Distance="+str(totDist))
+            #Print Latitude and Longtitude Values
+            y += font20.getsize(endrunmsg)
+            draw.text((x, y), strLat, font=font18, fill="#FFFFFF")
+            y += font18.getsize(strLat)[1]
+            draw.text((x, y), strLong, font=font18, fill="#FFFFFF")
 
-                    # Display Time.
-                    y+= font.getsize("Distance="+str(totDist))[1]
-                    draw.text((x, y), "Time="+str(totTime), font=font, fill="#FFFFFF")
+            # Display Distance.
+            coords_1 = (startLat, startLon)
+            coords_2 = (lat, lng)
 
-                    disp.image(image, rotation)
-                    time.sleep(0.5)
-                    totTime+=0.5
+            distance = geopy.distance.distance(coords_1, coords_2).miles
+            totDist += distance
 
-                print(gps)
+            y += font18.getsize(strLong)[1]
+            draw.text((x, y), "Distance: " + str(totDist) + " miles", font=font18, fill="#FFFFFF")
+
+            # Display Time
+            y += font18.getsize("Distance: " + str(totDist))[1]
+            draw.text((x, y), "Time: "+str(totTime), font=font18, fill="#FFFFFF")
+
+            disp.image(image, rotation)
+            time.sleep(0.5)
+            totTime+=0.5
+        
+        print(gps)
 
