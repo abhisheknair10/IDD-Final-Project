@@ -68,11 +68,14 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
-#draw.rectangle((0, 0, width, height), outline=0, fill=0)
-#draw.text((x, 0),"Press Button to Start Run" , font=font, fill="#FFFFFF")
+draw.rectangle((0, 0, width, height), outline=0, fill=0)
+draw.text((x, 0),"Press Button to Start Run" , font=font, fill="#FFFFFF")
+disp.image(image, rotation)
 startRun = False
 startLat = 0.0
 startLon = 0.0
+totDist = 0.0
+totTime = 0.0
 
 
 while True:
@@ -97,7 +100,23 @@ while True:
                         startRun = True
                         startLat = lat
                         startLon = lng
+                        totDist = 0.0
+                        totTime = 0.0
                         print("Entered Start Run")
+                
+                if buttonA.value and not buttonB.value:
+                    startRun=False
+                    print("Run Ended")
+                    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+                    y = top
+                    draw.text((x, top),"Run Ended" , font=font, fill="#FFFFFF")
+                    y+=font.getsize("Run Ended")[1]
+                    draw.text((x, y), "Final Distance="+str(totDist), font=font, fill="#FFFFFF")
+                    y+=font.getsize("Final Distance="+str(totDist))[1]
+                    draw.text((x, y), "Total Time="+str(totTime), font=font, fill="#FFFFFF")
+                    y+=font.getsize("Total Time="+str(totTime))[1]
+                    draw.text((x, y),"Press Top Button to Start Run" , font=font, fill="#FFFFFF")
+                    disp.image(image, rotation)
 
                 if startRun:
                     print("Running")
@@ -115,11 +134,19 @@ while True:
                     coords_2 = (lat, lng)
 
                     distance = geopy.distance.distance(coords_1, coords_2).miles
+                    totDist+=distance
 
-                    draw.text((x, y), "Distance="+str(distance), font=font, fill="#FFFFFF")
-                    print("Distance="+str(distance))
+                    y+= font.getsize(strLong)[1]
+                    draw.text((x, y), "Distance="+str(totDist), font=font, fill="#FFFFFF")
+                    print("Distance="+str(totDist))
 
-                    time.sleep(1)
+                    # Display Time.
+                    y+= font.getsize("Distance="+str(totDist))[1]
+                    draw.text((x, y), "Time="+str(totTime), font=font, fill="#FFFFFF")
+
+                    disp.image(image, rotation)
+                    time.sleep(0.5)
+                    totTime+=0.5
 
                 print(gps)
 
