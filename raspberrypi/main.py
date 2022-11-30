@@ -153,7 +153,8 @@ while True:
             coords_1 = (startLat, startLon)
             coords_2 = (lat, lng)
 
-            distance = geopy.distance.distance(coords_1, coords_2).miles
+            distance = geopy.distance.geodesic(coords_1, coords_2).miles
+            
             totDist += distance
 
             y += font16.getsize(strLong)[1]
@@ -165,7 +166,7 @@ while True:
 
             # Display Speed
             y += font16.getsize("Time: " + str(totTime))[1]
-            draw.text((x, y + 15), "Avg Speed: " + str(distance*3600) + " mi/hr", font=font16, fill="#FFFFFF")
+            draw.text((x, y + 15), "Avg Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font16, fill="#FFFFFF")
 
             draw.text((x, height - 30), "<--- End Run", font=font20, fill="#FF4949")
 
