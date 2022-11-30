@@ -56,7 +56,7 @@ top = padding
 bottom = height - padding
 # Move left to right keeping track of the current x position for drawing shapes.
 x = 0
-font18 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font16 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
 font20 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 
@@ -111,12 +111,12 @@ while True:
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             y = top
             draw.text((x, top + 10),"Run Ended" , font=font20, fill="#4DFF19")
-            y += font18.getsize("Run Ended")[1]
-            draw.text((x, y + 15), "Final Distance: "+str(totDist), font=font18, fill="#FFFFFF")
-            y += font18.getsize("Final Distance: " + str(totDist) + " miles")[1]
-            draw.text((x, y + 20), "Total Time: " + str(totTime) + "s", font=font18, fill="#FFFFFF")
-            y += font18.getsize("Total Time: " + str(totDist))[1]
-            draw.text((x, y + 25), "Avg Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font18, fill="#FFFFFF")
+            y += font16.getsize("Run Ended")[1]
+            draw.text((x, y + 15), "Final Distance: "+str(totDist), font=font16, fill="#FFFFFF")
+            y += font16.getsize("Final Distance: " + str(totDist) + " miles")[1]
+            draw.text((x, y + 20), "Total Time: " + str(totTime) + "s", font=font16, fill="#FFFFFF")
+            y += font16.getsize("Total Time: " + str(totDist))[1]
+            draw.text((x, y + 25), "Avg Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font16, fill="#FFFFFF")
             disp.image(image, rotation)
 
             time.sleep(5)
@@ -141,9 +141,9 @@ while True:
 
             #Print Latitude and Longtitude Values
             y += font20.getsize(metricsmsg)[1]
-            draw.text((x, y), strLat, font=font18, fill="#FFFFFF")
-            y += font18.getsize(strLat)[1]
-            draw.text((x, y), strLong, font=font18, fill="#FFFFFF")
+            draw.text((x, y), strLat, font=font16, fill="#FFFFFF")
+            y += font16.getsize(strLat)[1]
+            draw.text((x, y), strLong, font=font16, fill="#FFFFFF")
 
             # Display Distance.
             coords_1 = (startLat, startLon)
@@ -152,14 +152,14 @@ while True:
             distance = geopy.distance.distance(coords_1, coords_2).miles
             totDist += distance
 
-            y += font18.getsize(strLong)[1]
-            draw.text((x, y), "Distance: " + str(totDist) + " miles", font=font18, fill="#FFFFFF")
+            y += font16.getsize(strLong)[1]
+            draw.text((x, y), "Distance: " + str(totDist) + " miles", font=font16, fill="#FFFFFF")
 
             # Display Time
-            y += font18.getsize("Distance: " + str(totDist))[1]
-            draw.text((x, y), "Time: "+str(totTime), font=font18, fill="#FFFFFF")
+            y += font16.getsize("Distance: " + str(totDist))[1]
+            draw.text((x, y), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
 
-            draw.text((x, height - 10), "Time: "+str(totTime), font=font18, fill="#FFFFFF")
+            draw.text((x, height - 10), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
 
             disp.image(image, rotation)
             time.sleep(0.5)
