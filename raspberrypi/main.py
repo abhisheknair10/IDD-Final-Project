@@ -143,7 +143,7 @@ while True:
             y += font20.getsize(metricsmsg)[1]
             draw.text((x, y + 5), strLat, font=font16, fill="#FFFFFF")
             y += font16.getsize(strLat)[1]
-            draw.text((x, y + 5), strLong, font=font16, fill="#FFFFFF")
+            draw.text((x, y + 10), strLong, font=font16, fill="#FFFFFF")
 
             # Display Distance.
             coords_1 = (startLat, startLon)
@@ -153,11 +153,11 @@ while True:
             totDist += distance
 
             y += font16.getsize(strLong)[1]
-            draw.text((x, y + 5), "Distance: " + str(totDist) + " miles", font=font16, fill="#FFFFFF")
+            draw.text((x, y + 15), "Distance: " + str(totDist) + " miles", font=font16, fill="#FFFFFF")
 
             # Display Time
             y += font16.getsize("Distance: " + str(totDist))[1]
-            draw.text((x, y + 5), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
+            draw.text((x, y + 20), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
 
             draw.text((x, height - 30), "<--- End Run", font=font20, fill="#FF4949")
 
