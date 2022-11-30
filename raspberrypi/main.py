@@ -91,10 +91,10 @@ while True:
         newmsg=pynmea2.parse(newdata.decode())
         lat=newmsg.latitude
         lng=newmsg.longitude
-        gps = "Latitude=" + str(lat) + "and Longitude=" + str(lng)
+        gps = "Latitude: " + str(lat) + "and Longitude: " + str(lng)
 
-        strLat = "Latitude=" + str(lat)
-        strLong = "Longitude=" + str(lng)
+        strLat = "Latitude: " + str(lat)
+        strLong = "Longitude: " + str(lng)
 
 
         if buttonB.value and not buttonA.value:  # just button A pressed
@@ -113,8 +113,10 @@ while True:
             draw.text((x, top + 10),"Run Ended" , font=font20, fill="#4DFF19")
             y += font18.getsize("Run Ended")[1]
             draw.text((x, y + 15), "Final Distance: "+str(totDist), font=font18, fill="#FFFFFF")
-            y += font18.getsize("Final Distance: " + str(totDist))[1]
-            draw.text((x, y + 15), "Total Time: " + str(totTime), font=font18, fill="#FFFFFF")
+            y += font18.getsize("Final Distance: " + str(totDist) + " miles")[1]
+            draw.text((x, y + 15), "Total Time: " + str(totTime) + "s", font=font18, fill="#FFFFFF")
+            y += font18.getsize("Total Time: " + str(totDist))[1]
+            draw.text((x, y + 15), "Average Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font18, fill="#FFFFFF")
             disp.image(image, rotation)
 
             time.sleep(5)
