@@ -141,7 +141,7 @@ while True:
 
             #Print Latitude and Longtitude Values
             y += font20.getsize(metricsmsg)[1]
-            draw.text((x, y + 5), strLat, font=font16, fill="#FFFFFF")
+            draw.text((x, y + 5), f"Coord: {str(lat)}u'\N{DEGREE SIGN}', {str(lng)}u'\N{DEGREE SIGN}'", font=font16, fill="#FFFFFF")
             y += font16.getsize(strLat)[1]
             draw.text((x, y + 10), strLong, font=font16, fill="#FFFFFF")
 
