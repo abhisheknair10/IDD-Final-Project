@@ -135,12 +135,12 @@ while True:
             # Draw a black filled box to clear the image.
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-            y = top + 10
-            endrunmsg = "<--- End Run"
-            draw.text((x, y), "<--- End Run", font=font20, fill="#FF4119")
+            y = top
+            metricsmsg = "Metrics"
+            draw.text((x, y), "Metrics", font=font20, fill="#C89CFF")
 
             #Print Latitude and Longtitude Values
-            y += font20.getsize(endrunmsg)[1]
+            y += font20.getsize(metricsmsg)[1]
             draw.text((x, y + 10), strLat, font=font18, fill="#FFFFFF")
             y += font18.getsize(strLat)[1]
             draw.text((x, y), strLong, font=font18, fill="#FFFFFF")
@@ -158,6 +158,8 @@ while True:
             # Display Time
             y += font18.getsize("Distance: " + str(totDist))[1]
             draw.text((x, y), "Time: "+str(totTime), font=font18, fill="#FFFFFF")
+
+            draw.text((x, height - 10), "Time: "+str(totTime), font=font18, fill="#FFFFFF")
 
             disp.image(image, rotation)
             time.sleep(0.5)
