@@ -114,9 +114,9 @@ while True:
             y += font18.getsize("Run Ended")[1]
             draw.text((x, y + 15), "Final Distance: "+str(totDist), font=font18, fill="#FFFFFF")
             y += font18.getsize("Final Distance: " + str(totDist) + " miles")[1]
-            draw.text((x, y + 15), "Total Time: " + str(totTime) + "s", font=font18, fill="#FFFFFF")
+            draw.text((x, y + 20), "Total Time: " + str(totTime) + "s", font=font18, fill="#FFFFFF")
             y += font18.getsize("Total Time: " + str(totDist))[1]
-            draw.text((x, y + 15), "Average Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font18, fill="#FFFFFF")
+            draw.text((x, y + 25), "Avg Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font18, fill="#FFFFFF")
             disp.image(image, rotation)
 
             time.sleep(5)
