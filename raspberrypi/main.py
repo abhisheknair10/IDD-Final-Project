@@ -70,7 +70,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 draw.rectangle((0, 0, width, height), outline=0, fill=0)
-draw.text((x, 0),"<--- Start Run" , font=font20, fill="#4DFF19")
+draw.text((x, 10),"<--- Start Run" , font=font20, fill="#4DFF19")
 disp.image(image, rotation)
 startRun = False
 startLat = 0.0
@@ -107,20 +107,20 @@ while True:
         
         if buttonA.value and not buttonB.value:
             
-            startRun=False
+            startRun = False
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             y = top
-            draw.text((x, top),"Run Ended" , font=font20, fill="#4DFF19")
-            y+=font18.getsize("Run Ended")[1]
-            draw.text((x, y), "Final Distance: "+str(totDist), font=font18, fill="#FFFFFF")
-            y+=font18.getsize("Final Distance: "+str(totDist))[1]
-            draw.text((x, y), "Total Time: "+str(totTime), font=font18, fill="#FFFFFF")
+            draw.text((x, top + 10),"Run Ended" , font=font20, fill="#4DFF19")
+            y += font18.getsize("Run Ended")[1]
+            draw.text((x, y + 15), "Final Distance: "+str(totDist), font=font18, fill="#FFFFFF")
+            y += font18.getsize("Final Distance: " + str(totDist))[1]
+            draw.text((x, y + 15), "Total Time: " + str(totTime), font=font18, fill="#FFFFFF")
             disp.image(image, rotation)
 
             time.sleep(5)
 
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x, 20),"<--- Start Run" , font=font20, fill="#4DFF19")
+            draw.text((x, 10),"<--- Start Run" , font=font20, fill="#4DFF19")
             disp.image(image, rotation)
             startRun = False
             startLat = 0.0
@@ -133,7 +133,7 @@ while True:
             # Draw a black filled box to clear the image.
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-            y = top + 20
+            y = top + 10
             endrunmsg = "<--- End Run"
             draw.text((x, y), "<--- End Run", font=font20, fill="#FF4119")
 
