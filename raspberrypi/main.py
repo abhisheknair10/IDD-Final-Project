@@ -120,7 +120,7 @@ while True:
             time.sleep(5)
 
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
-            draw.text((x, 0),"<--- Start Run" , font=font20, fill="#4DFF19")
+            draw.text((x, 20),"<--- Start Run" , font=font20, fill="#4DFF19")
             disp.image(image, rotation)
             startRun = False
             startLat = 0.0
@@ -133,13 +133,13 @@ while True:
             # Draw a black filled box to clear the image.
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-            y = top
+            y = top + 20
             endrunmsg = "<--- End Run"
             draw.text((x, y), "<--- End Run", font=font20, fill="#FF4119")
 
             #Print Latitude and Longtitude Values
             y += font20.getsize(endrunmsg)[1]
-            draw.text((x, y), strLat, font=font18, fill="#FFFFFF")
+            draw.text((x, y + 10), strLat, font=font18, fill="#FFFFFF")
             y += font18.getsize(strLat)[1]
             draw.text((x, y), strLong, font=font18, fill="#FFFFFF")
 
