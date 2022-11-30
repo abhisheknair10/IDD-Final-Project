@@ -157,6 +157,10 @@ while True:
             y += font16.getsize("Distance: " + str(totDist))[1]
             draw.text((x, y + 10), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
 
+            # Display Speed
+            y += font16.getsize("Time: " + str(totTime))[1]
+            draw.text((x, y + 15), "Avg Speed: " + str(distance*3600) + " mi/hr", font=font16, fill="#FFFFFF")
+
             draw.text((x, height - 30), "<--- End Run", font=font20, fill="#FF4949")
 
             disp.image(image, rotation)
