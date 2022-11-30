@@ -283,7 +283,7 @@ app.get('/analyze-run/:runNum', (req, res) => {
 
 All of this code is stored in [app.js](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/server/app.js) in this GitHub repository.
 
-Since we are using the Express framework, we need to install it using the command:
+The [Express](https://expressjs.com) framework is Node.js compatible framework to create and serve REST API endpoint requests created by clients. Hence, we need to install it using the command:
 
 ```bash
 npm install express
