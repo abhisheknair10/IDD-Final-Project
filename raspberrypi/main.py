@@ -141,7 +141,7 @@ while True:
 
             #Print Latitude and Longtitude Values
             y += font20.getsize(metricsmsg)[1]
-            draw.text((x, y + 10), strLat, font=font18, fill="#FFFFFF")
+            draw.text((x, y), strLat, font=font18, fill="#FFFFFF")
             y += font18.getsize(strLat)[1]
             draw.text((x, y), strLong, font=font18, fill="#FFFFFF")
 
