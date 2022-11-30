@@ -159,7 +159,7 @@ while True:
             y += font16.getsize("Distance: " + str(totDist))[1]
             draw.text((x, y + 5), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
 
-            draw.text((x, height - 30), "Time: "+str(totTime), font=font20, fill="#FF4949")
+            draw.text((x, height - 30), "<--- End Run", font=font20, fill="#FF4949")
 
             disp.image(image, rotation)
             time.sleep(0.5)
