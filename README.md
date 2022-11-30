@@ -146,7 +146,6 @@ After completing the above steps, the server is ready to host a Node.js applicat
 The above steps were sourced from the following [YouTube Video by CodeBubb](https://www.youtube.com/watch?v=fJ4x00SR7vo).
 
 ## 3.2. Backend Node.js Application Setup
-___
 
 For this project, we will be using a Node.js server to collect, format and store the GPS data that is streamed from the Raspberry Pi to a JSON file. The data for each run is stored in an array where each index, representing a run, contains an object with the following properties:
 
