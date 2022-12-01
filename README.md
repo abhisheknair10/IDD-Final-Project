@@ -50,14 +50,18 @@ The aim of this assignment is to:
 | 4.      | [Client Side Development](https://github.com/abhisheknair10/IDD-Final-Project#4-client-side-development)
 | 5.      | [Testing Results and Conclusions](https://github.com/abhisheknair10/IDD-Final-Project#5-testing-results-and-conclusions)
 
-https://github.com/abhisheknair10/IDD-Final-Project#5-testing-results-and-conclusions
-
 </div>
 
 To understand how the different parts of this project and different services communicate with each other to create a valuable application, below is a diagram of the app architecture.
 
 <p align="center">
     <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/architecture.png" width="600" title="IDD Slide">
+</p>
+
+A storyboard of the events and interaction between the the different parts of the system and the user is shown below.
+
+<p align="center">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/storyboard.png" width="600" title="IDD Slide">
 </p>
 
 # 1. About the Hardware
