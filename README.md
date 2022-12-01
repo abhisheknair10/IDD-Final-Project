@@ -203,6 +203,8 @@ buttonB.switch_to_input()
 
 This sets up the buttons and the backlight and tells the Raspberry Pi to treat the GPIO pins as digitalIO vs analogIO. The backlight is set to True to turn on the backlight of the display.
 
+The original source of the code to setup the display is available and the [Cornell Tech Interactive Lab Hub GitHub Page](https://github.com/FAR-Lab/Interactive-Lab-Hub) under [Lab 2/screen_clock.py](https://github.com/FAR-Lab/Interactive-Lab-Hub/blob/Fall2022/Lab%202/screen_clock.py)
+
 # 3. Cloud Server Development
 
 The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more.
