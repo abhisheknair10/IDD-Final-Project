@@ -48,6 +48,9 @@ The aim of this assignment is to:
 | 2.      | [The Run Tracking Software on the Raspberry Pi](https://github.com/abhisheknair10/IDD-Final-Project#2-the-run-tracking-software-on-the-raspberry-pi)
 | 3.      | [Cloud Server Development](https://github.com/abhisheknair10/IDD-Final-Project#3-cloud-server-development)
 | 4.      | [Client Side Development](https://github.com/abhisheknair10/IDD-Final-Project#4-client-side-development)
+| 5.      | [Testing Results and Conclusions](https://github.com/abhisheknair10/IDD-Final-Project#5-testing-results-and-conclusions)
+
+https://github.com/abhisheknair10/IDD-Final-Project#5-testing-results-and-conclusions
 
 </div>
 
@@ -456,7 +459,7 @@ Access the dashboard by simply downloading the HTML file and opening it in your 
 
 The above system was tested by the developers and here is the result:
 
-[<img alt="alt_text" width="800px" src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/img.png" />](https://www.google.com/)
+[<img alt="alt_text" width="800px" src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/img.png" />](https://drive.google.com/file/d/1ktqxDswKMsTHWC6RikK0EJRZScrPKKHv/view?usp=sharing)
 
 In the coming days we wish to make the system more accurate at recording GPS data, make the system more user friendly without exposed wires and hardware, and finally test it with users or volunteers to get feedback on the system.
 
