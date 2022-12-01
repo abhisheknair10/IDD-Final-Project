@@ -456,10 +456,7 @@ Access the dashboard by simply downloading the HTML file and opening it in your 
 
 The above system was tested by the developers and here is the result:
 
-<p align="center">
-    <img src="https://drive.google.com/file/d/1VHpooVERcRLtxW_zLKQY3ECRklrUVTWN/view?usp=sharing"
-    width="800" title="testing">
-</p>
+[![name](link to image on GH)](link to your URL)
 
 In the coming days we wish to make the system more accurate at recording GPS data, make the system more user friendly without exposed wires and hardware, and finally test it with users or volunteers to get feedback on the system.
 
