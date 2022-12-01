@@ -454,6 +454,12 @@ Access the dashboard by simply downloading the HTML file and opening it in your 
 
 ## 5.1. Testing and Results
 
+The above system was tested by the developers and here is the result:
+
+<video src="https://drive.google.com/file/d/1VHpooVERcRLtxW_zLKQY3ECRklrUVTWN/view?usp=sharing" width=600/>
+
+In the coming days we wish to make the system more accurate at recording GPS data, make the system more user friendly without exposed wires and hardware, and finally test it with users or volunteers to get feedback on the system.
+
 ## 5.2. Pitfalls and Issues
 
 While doing this project, we encountered some technical issues with the hardware and software. Some of the issues we faced are listed below:
