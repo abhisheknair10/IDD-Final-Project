@@ -457,7 +457,7 @@ Access the dashboard by simply downloading the HTML file and opening it in your 
 The above system was tested by the developers and here is the result:
 
 <p align="center">
-    <img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg"
+    <img src="https://drive.google.com/file/d/1VHpooVERcRLtxW_zLKQY3ECRklrUVTWN/view?usp=sharing"
     width="800" title="testing">
 </p>
 
