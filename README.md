@@ -93,10 +93,115 @@ For our specific device, the port was /dev/ttyAMA0.
 
 This port needs to be noted down when running the python file to read the GPS data from the correct port at a baud rate of 9600.
 
-
 # 2. The Run Tracking Software on the Raspberry Pi
 
-To be added...
+The Neo 6M GPS module is based on the principle of triangulation. It receives signals from up to 22 satellites across 50 channels. The GPS module then uses the time difference of arrival of the signals from the satellites to calculate the distance between the GPS module and the satellites. This varying distance from multiple sources is then used to calculate the accurate latitude and longitude of the GPS module which is then streamed to the Raspberry Pi.
+
+Since we are using a versatile and open language such as Python, community developed libraries can be used to make interfacing with the GPS module relatively straightforward. The [pynmea2](https://github.com/Knio/pynmea2) module is a Python module based on the NMEA 0183 protocol which is a protocol and data specification for communication between marine electronics such as echo sounder, sonars, anemometer, gyrocompass, autopilot, GPS receivers and many other types of instruments.
+
+The pynmea2 module can be used to parse the NMEA data that is received from the GPS module and extract the latitude and longitude data. This is done by:
+
+1. Importing the pynmea2 module:
+    ```python
+    import pynmea2
+    ```
+
+2. Opening the serial port that is connected to the GPS module:
+    ```python
+    ser = serial.Serial(port, baudrate=9600, timeout=0.5)
+    ```
+
+3. Reading the data from the serial port:
+    ```python
+    data = ser.readline()
+    ```
+
+4. Parsing the data using the pynmea2 module:
+    ```python
+    if data[0:6] == b'$GPRMC':
+        msg = pynmea2.parse(data)
+        lat = msg.latitude
+        lon = msg.longitude
+    ```
+
+Hence, using the above steps, we can find the GPS coordinates of the module accurate to 2.5 metres. Functions and code for the specific application is pretty straightforward to build for an experienced software engineer and programmer and hence, is covered in [main.py](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/raspberrypi/main.py).
+
+For steps on how to setup the display to display the appropriate messages at the appropriate times, the [adafruit_rgb_display](https://docs.circuitpython.org/projects/rgb_display/en/latest/api.html#adafruit-rgb-display-st7789) module was used. Displaying a message is done using the following code:
+
+```python
+draw.rectangle((0, 0, width, height), outline=0, fill=0)
+y = top
+draw.text(
+    (x, y),
+    "Display Message", 
+    font=font20,
+    fill="#4DFF19"
+)
+y += font16.getsize("Run Ended")[1]
+disp.image(image, rotation)
+```
+
+Some initial software setting up is required before the above code can run which is shown below:
+
+```python
+# The display uses a communication protocol called SPI.
+# SPI will not be covered in depth in this course. 
+# you can read more https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
+cs_pin = digitalio.DigitalInOut(board.CE0)
+dc_pin = digitalio.DigitalInOut(board.D25)
+reset_pin = None
+BAUDRATE = 64000000  # the rate  the screen talks to the pi
+# Setup SPI bus using hardware SPI:
+spi = board.SPI()
+# Create the ST7789 display:
+disp = st7789.ST7789(
+    board.SPI(),
+    cs=cs_pin,
+    dc=dc_pin,
+    rst=reset_pin,
+    baudrate=BAUDRATE,
+    width=135,
+    height=240,
+    x_offset=53,
+    y_offset=40,
+)
+
+
+# Create blank image for drawing.
+# Make sure to create image with mode 'RGB' for full color.
+height = disp.width  # we swap height/width to rotate it to landscape!
+width = disp.height
+image = Image.new("RGB", (width, height))
+rotation = 90
+
+# Get drawing object to draw on image.
+draw = ImageDraw.Draw(image)
+
+# Draw a black filled box to clear the image.
+draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+disp.image(image, rotation)
+# Draw some shapes.
+# First define some constants to allow easy resizing of shapes.
+padding = -2
+top = padding
+bottom = height - padding
+# Move left to right keeping track of the current x position for drawing shapes.
+x = 0
+font16 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
+font20 = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
+
+
+# these setup the code for our buttons and the backlight and tell the pi to treat the GPIO pins as digitalIO vs analogIO
+backlight = digitalio.DigitalInOut(board.D22)
+backlight.switch_to_output()
+backlight.value = True
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+```
+
+This sets up the buttons and the backlight and tells the Raspberry Pi to treat the GPIO pins as digitalIO vs analogIO. The backlight is set to True to turn on the backlight of the display.
 
 # 3. Cloud Server Development
 
