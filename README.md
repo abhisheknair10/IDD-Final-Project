@@ -212,13 +212,17 @@ This sets up the buttons and the backlight and tells the Raspberry Pi to treat t
 
 The original source of the code to setup the display is available and the [Cornell Tech Interactive Lab Hub GitHub Page](https://github.com/FAR-Lab/Interactive-Lab-Hub) under [Lab 2/screen_clock.py](https://github.com/FAR-Lab/Interactive-Lab-Hub/blob/Fall2022/Lab%202/screen_clock.py)
 
-# 3. Cloud Server Development
+# 3. Building the User Interface for the System
+
+[Insert Here]
+
+# 4. Cloud Server Development
 
 The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more.
 
 To complete this task, a server was rented from [Linode](https://www.linode.com), a platform providing cloud based services. Linux based servers running other Linux distros can also be rented from other providers such as [DigitalOcean](https://www.digitalocean.com/products/droplets), [Amazon Web Services](https://aws.amazon.com/ec2/?nc2=h_ql_prod_cp_ec2), [Microsoft Azure](https://azure.microsoft.com/en-gb/services/virtual-machines/), [Google Cloud](https://cloud.google.com/compute), etc. Most providers offer free credits for the first few months.
 
-## 3.1 Server Setup
+## 4.1 Server Setup
 
 The server in question is a Linux based Ubuntu server running a Node.js application to accept RESTful API requests.
 
@@ -259,7 +263,7 @@ After completing the above steps, the server is ready to host a Node.js applicat
 
 The above steps were sourced from the following [YouTube Video by CodeBubb](https://www.youtube.com/watch?v=fJ4x00SR7vo).
 
-## 3.2. Backend Node.js Application Setup
+## 4.2. Backend Node.js Application Setup
 
 For this project, we will be using a Node.js server to collect, format and store the GPS data that is streamed from the Raspberry Pi to a JSON file. The data for each run is stored in an array where each index, representing a run, contains an object with the following properties:
 
@@ -413,13 +417,13 @@ Now the application is ready to run with the following commands:
     pm2 start app.js
     ```
 
-# 4. Client Side Development
+# 5. Client Side Development
 
-## 4.1. Frontend Web Dashboard Setup
+## 5.1. Frontend Web Dashboard Setup
 
 The frontend of this application for viewing the runs on a dashboard is hosted on Linode and is built using HTML, CSS, and JavaScript. The HTML and CSS files are stored in [index.html](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/frontend/index.html)
 
-## 4.2. Google Maps JavaScript API
+## 5.2. Google Maps JavaScript API
 Displaying the workout data on a map as path on the map was possible with the help of Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
 <p align="center">
@@ -457,9 +461,9 @@ Marking and plotting lines on the map in detail can be found in the [source code
 
 Access the dashboard by simply downloading the HTML file and opening it in your browser.
 
-# 5. Testing, Results and Conclusions
+# 6. Testing, Results and Conclusions
 
-## 5.1. Testing and Results
+## 6.1. Testing and Results
 
 The above system was tested by the developers and here is the result:
 
@@ -467,7 +471,7 @@ The above system was tested by the developers and here is the result:
 
 In the coming days we wish to make the system more accurate at recording GPS data, make the system more user friendly without exposed wires and hardware, and finally test it with users or volunteers to get feedback on the system.
 
-## 5.2. Pitfalls and Issues
+## 6.2. Pitfalls and Issues
 
 While doing this project, we encountered some technical issues with the hardware and software. Some of the issues we faced are listed below:
 
@@ -477,6 +481,6 @@ While doing this project, we encountered some technical issues with the hardware
 
 3. Initially, the frontend of the application was hosted on GitHub Pages, a service provided by GitHub to host static websites. However, since the API endpoint for getting the recorded GPS sat in a non secure (HTTP as opposed to HTTPS) and the data was being requested from a HTTPS site, the browser was blocking the request. Converting our endpoint from a HTTP to a HTTPS endpoint requires the purchase of a domain name and an SSL certificate which usually costs in total a few hundred dollars. Since this is project and more or less a proof of concept, we decided to download the HTML file locally and run it on the browser instead of hosting it on GitHub Pages.
 
-## 5.3. Conclusions
+## 6.3. Conclusions
 
 Overall, we were able to successfully build a GPS tracking application that can be used to track runs and other outdoor activities. The application is able to record the GPS coordinates of the user and store it in a JSON file. The data is then served to the frontend dashboard which displays the data on a map. The application is able to run on a Raspberry Pi and can be used to track runs and other outdoor activities.
