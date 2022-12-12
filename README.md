@@ -46,6 +46,7 @@ The aim of this assignment is to:
 | :---:   | :---: 
 | 1.      | [About the Hardware](https://github.com/abhisheknair10/IDD-Final-Project#1-about-the-hardware)
 | 2.      | [The Run Tracking Software on the Raspberry Pi](https://github.com/abhisheknair10/IDD-Final-Project#2-the-run-tracking-software-on-the-raspberry-pi)
+| 2.      | [Building the User Interface for the System](https://github.com/abhisheknair10/IDD-Final-Project#3-building-the-user-interface-for-the-system)
 | 3.      | [Cloud Server Development](https://github.com/abhisheknair10/IDD-Final-Project#3-cloud-server-development)
 | 4.      | [Client Side Development](https://github.com/abhisheknair10/IDD-Final-Project#4-client-side-development)
 | 5.      | [Testing Results and Conclusions](https://github.com/abhisheknair10/IDD-Final-Project#5-testing-results-and-conclusions)
