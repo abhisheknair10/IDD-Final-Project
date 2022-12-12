@@ -83,13 +83,13 @@ while True:
     port = "/dev/ttyACM0"
     ser = serial.Serial(port, baudrate=9600, timeout=0.5)
     dataout = pynmea2.NMEAStreamReader()
-    newdata=ser.readline()
+    newdata = ser.readline()
 
     if newdata[0:6] == b'$GPRMC':
         
-        newmsg=pynmea2.parse(newdata.decode())
-        lat=newmsg.latitude
-        lng=newmsg.longitude
+        newmsg = pynmea2.parse(newdata.decode())
+        lat = round(newmsg.latitude, 8)
+        lng = round(newmsg.longitude, 8)
         gps = "Latitude: " + str(lat) + "and Longitude: " + str(lng)
 
         strLat = "Latitude: " + str(lat)
