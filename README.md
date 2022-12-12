@@ -127,8 +127,8 @@ The pynmea2 module can be used to parse the NMEA data that is received from the 
     ```python
     if data[0:6] == b'$GPRMC':
         msg = pynmea2.parse(data)
-        lat = msg.latitude
-        lon = msg.longitude
+        lat = round(msg.latitude, 6)
+        lon = round(msg.longitude, 6)
     ```
 
 Hence, using the above steps, we can find the GPS coordinates of the module accurate to 2.5 metres. Functions and code for the specific application is pretty straightforward to build for an experienced software engineer and programmer and hence, is covered in [main.py](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/raspberrypi/main.py).
