@@ -70,8 +70,9 @@ buttonB.switch_to_input()
 
 draw.rectangle((0, 0, width, height), outline=0, fill=0)
 draw.text((x, 10),"<--- Start Run" , font=font20, fill="#4DFF19")
-draw.text((x, 30),"Track your Run with this GPS device" , font=font16, fill="#D45BFF")
-draw.text((x, 40),"and analyze your runs later to learn from it" , font=font16, fill="#D45BFF")
+draw.text((x, 40),"Track your Run with this GPS" , font=font16, fill="#D45BFF")
+draw.text((x, 60),"device and analyze your runs " , font=font16, fill="#D45BFF")
+draw.text((x, 80),"later to learn from it" , font=font16, fill="#D45BFF")
 disp.image(image, rotation)
 startRun = False
 startLat = 0.0
