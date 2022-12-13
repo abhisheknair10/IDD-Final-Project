@@ -492,6 +492,10 @@ The final device was built and tested with a user here:
 
 [<img alt="alt_text" width="800px" src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/img.png" />](https://drive.google.com/file/d/1gSbc73K5WCHTG4GuZ3Zx8EB3bQomEP5Q/view?usp=sharing)
 
+The feedback from the user was:
+1. 'The device is beautiful'
+2. 'Buttons are a bit laggy'
+3. 'But overall for the first prototype, it's great!'
 
 ## 6.2. Pitfalls and Issues
 
