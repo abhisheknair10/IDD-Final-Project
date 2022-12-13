@@ -225,6 +225,12 @@ The biggest concern for this project was not to simply create a functional produ
     <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/boardgif.gif" width="400" title="board">
 </p>
 
+We were able to source and acquire a pre-built model for the very popular Raspberry Pi from [here](https://www.thingiverse.com/thing:922740). However, since we had additional hardware and a display to be mounted and visible to the user, the model was modified. Ideally, with enough time, we would create a custom model for the Raspberry Pi and the additional hardware but in this case, we 3D printed the model as is and sawed out the necessary space for the display. The extra hardware, ie. the GPS module, was simply stuck on the case with sticky tape. The resulting model is shown below:
+
+<p align="center">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/boardgif.gif" width="400" title="board">
+</p>
+
 # 4. Cloud Server Development
 
 The main aim of this project is to provide useful insights and data in a visually appealing manner to a user. Using GPS coordinates collected during a run, one can extract a huge amount of workout insights including workout path, average pace, total distance, time taken and more.
