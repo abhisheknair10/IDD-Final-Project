@@ -215,7 +215,17 @@ The original source of the code to setup the display is available and the [Corne
 
 # 3. Building the User Interface for the System
 
-[Insert Here]
+The biggest concern for this project was not to simply create a functional product but also take into account the design and user interface principles that was taught in the class. We were able to use the knowledge gained from the class to create a user interface that was both functional and aesthetically pleasing. 
+
+<p align="center">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/dashboard.png" width="800" title="gmapi">
+</p>
+
+<p align="center">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/dashboard.png" width="800" title="gmapi">
+</p>
+
+![Alt Text](vrdetect.gif)
 
 # 4. Cloud Server Development
 
@@ -470,7 +480,7 @@ The above system was tested by the developers and here is the result:
 
 [<img alt="alt_text" width="800px" src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/img.png" />](https://drive.google.com/file/d/1ktqxDswKMsTHWC6RikK0EJRZScrPKKHv/view?usp=sharing)
 
-In the coming days we wish to make the system more accurate at recording GPS data, make the system more user friendly without exposed wires and hardware, and finally test it with users or volunteers to get feedback on the system.
+
 
 ## 6.2. Pitfalls and Issues
 
