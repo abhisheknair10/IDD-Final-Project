@@ -482,8 +482,16 @@ Access the dashboard by simply downloading the HTML file and opening it in your 
 
 The above system was tested by the developers and here is the result:
 
+<p align="center">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/user.gif" width="400" title="board">
+</p>
+
+
 [<img alt="alt_text" width="800px" src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/img.png" />](https://drive.google.com/file/d/1ktqxDswKMsTHWC6RikK0EJRZScrPKKHv/view?usp=sharing)
 
+The final device was built and tested with a user here:
+
+[<img alt="alt_text" width="800px" src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/img.png" />](https://drive.google.com/file/d/1gSbc73K5WCHTG4GuZ3Zx8EB3bQomEP5Q/view?usp=sharing)
 
 
 ## 6.2. Pitfalls and Issues

@@ -78,7 +78,7 @@ startRun = False
 startLat = 0.0
 startLon = 0.0
 totDist = 0.0
-totTime = 0.0
+totTime = 0.5
 
 
 while True:
@@ -105,7 +105,7 @@ while True:
             startLat = lat
             startLon = lng
             totDist = 0.0
-            totTime = 0.0
+            totTime = 0.5
 
             # create get request
             response = requests.get("http://97.107.140.230:3000/newrun")
@@ -129,14 +129,15 @@ while True:
 
             draw.rectangle((0, 0, width, height), outline=0, fill=0)
             draw.text((x, 10),"<--- Start Run" , font=font20, fill="#4DFF19")
-            draw.text((x, 30),"Track your Run with this GPS device" , font=font16, fill="#D45BFF")
-            draw.text((x, 40),"and analyze your runs later to learn from it" , font=font16, fill="#D45BFF")
+            draw.text((x, 40),"Track your Run with this GPS" , font=font16, fill="#D45BFF")
+            draw.text((x, 60),"device and analyze your runs " , font=font16, fill="#D45BFF")
+            draw.text((x, 80),"later to learn from it" , font=font16, fill="#D45BFF")
             disp.image(image, rotation)
             startRun = False
             startLat = 0.0
             startLon = 0.0
             totDist = 0.0
-            totTime = 0.0
+            totTime = 0.5
 
         if startRun:
 
@@ -152,11 +153,13 @@ while True:
 
             #Print Latitude and Longtitude Values
             y += font20.getsize(metricsmsg)[1]
-            draw.text((x, y + 5), f"Coord: {str(lat)}, {str(lng)}", font=font16, fill="#FFFFFF")
+            draw.text((x, y + 5), f"Coord: {str(round(lat, 2))}, {str(round(lng, 2))}", font=font16, fill="#FFFFFF")
 
             # Display Distance.
             coords_1 = (startLat, startLon)
             coords_2 = (lat, lng)
+            startLat = lat
+            startLon = lng
 
             distance = geopy.distance.geodesic(coords_1, coords_2).miles
             
@@ -166,12 +169,12 @@ while True:
             draw.text((x, y + 5), "Distance: " + str(totDist) + " miles", font=font16, fill="#FFFFFF")
 
             # Display Time
-            y += font16.getsize("Distance: " + str(totDist))[1]
-            draw.text((x, y + 10), "Time: "+str(totTime), font=font16, fill="#FFFFFF")
+            y += font16.getsize("Distance: " + str(round(totDist, 2)))[1]
+            draw.text((x, y + 10), "Time: "+str(round(totTime, 2)), font=font16, fill="#FFFFFF")
 
             # Display Speed
             y += font16.getsize("Time: " + str(totTime))[1]
-            draw.text((x, y + 15), "Avg Speed: " + str(totDist*3600/totTime) + " mi/hr", font=font16, fill="#FFFFFF")
+            draw.text((x, y + 15), "Avg Speed: " + str(round(totDist*3600/totTime, 2)) + " mi/hr", font=font16, fill="#FFFFFF")
 
             draw.text((x, height - 30), "<--- End Run", font=font20, fill="#FF4949")
 
