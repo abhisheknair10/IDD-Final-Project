@@ -218,14 +218,14 @@ The original source of the code to setup the display is available and the [Corne
 The biggest concern for this project was not to simply create a functional product but also take into account the design and user interface principles that was taught in the class. We were able to use the knowledge gained from the class to create a user interface that was both functional and aesthetically pleasing. 
 
 <p align="center">
-    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/dashboard.png" width="800" title="gmapi">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/UIBoard.png" width="800" title="board">
 </p>
 
 <p align="center">
-    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/dashboard.png" width="800" title="gmapi">
+    <img src="https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/boardgif.gif" width="800" title="board">
 </p>
 
-![Alt Text](vrdetect.gif)
+![Alt Text](https://github.com/abhisheknair10/IDD-Final-Project/blob/main/Assets/boardgif.gif)
 
 # 4. Cloud Server Development
 
